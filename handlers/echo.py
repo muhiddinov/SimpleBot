@@ -4,7 +4,7 @@ from loader import dp
 
 @dp.message_handler(state=None)
 async def bot_start(message: types.Message):
-    await message.answer(f"<b><i>{message.text}</i></b>!")
+    await message.answer(f"<b><i>{message.text}</i></b>")
 
 @dp.message_handler(state="*", content_types=types.ContentTypes.ANY)
 async def bot_echo_all(message: types.Message, state: FSMContext):
